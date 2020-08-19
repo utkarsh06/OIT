@@ -2,9 +2,25 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Service Now Helper</title>
 </head>
 <body>
-<h1>Hello</h1>
+<h1>Service now helper</h1>
+<form action = "#" th:action = "@{/helper}" th:object = "${fields}" method = "post">
+
+	<label>Which service are you offering: </label>
+	<div>
+		<select th:field="*{serviceOfferings}">
+	    <option th:value="ex" th:text="Example1"></option>
+	    <option th:value="e" th:text="Example2"></option>
+		</select>
+	</div>
+	
+
+	
+	<div>
+	<button type ="submit">Submit</button>
+	</div>
+</form>
 </body>
 </html>

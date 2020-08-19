@@ -10,6 +10,9 @@ public class SNHController {
 
 	@GetMapping(path = "/helper")
 	public String help(Model model) {
+		
+		Fields field = new Fields();
+		model.addAttribute(field);
 		System.out.println("this is done");
 		return "helper";
 	}
